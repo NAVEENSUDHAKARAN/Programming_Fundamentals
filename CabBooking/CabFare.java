@@ -7,7 +7,7 @@ public class CabFare {
 	public static void main(String[] args)
 	{
 		Scanner CabFare = new Scanner(System.in);
-		CabType CT = new CabType();
+		CabType ct = new CabType();
 		String namePattern = "^[A-Za-z]+$";
 		
 		System.out.println("Enter Your Name : ");
@@ -39,22 +39,22 @@ public class CabFare {
 			
 		if(cabType.equalsIgnoreCase("Micro"))
 		{
-			int billAmount = CT.microType(km);
-			System.out.print("The Bill Amount for Micro Type is : " + CT.microType(km));
+			int billAmount = ct.microType(km);
+			System.out.print("The Bill Amount for Micro Type is : " + ct.microType(km));
 
-			CT.discount(billAmount);
+			ct.discount(billAmount);
 		}
 		else if(cabType.equalsIgnoreCase("Mini"))
 		{
-			int billAmount = CT.miniType(km);
-			System.out.print("The Bill Amount for Mini Type is : " + CT.miniType(km));
-			CT.discount(billAmount);
+			int billAmount = ct.miniType(km);
+			System.out.print("The Bill Amount for Mini Type is : " + ct.miniType(km));
+			ct.discount(billAmount);
 		}
 		else if(cabType.equalsIgnoreCase("Prime"))
 		{
-			int billAmount = CT.primeType(km);
-			System.out.println("The Bill Amount for Prime Type is : " + CT.primeType(km));
-			CT.discount(billAmount);
+			int billAmount = ct.primeType(km);
+			System.out.println("The Bill Amount for Prime Type is : " + ct.primeType(km));
+			ct.discount(billAmount);
 
 		}
 		
